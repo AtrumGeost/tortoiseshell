@@ -1,7 +1,7 @@
 html {
   font-size: 18px;
   font-family: helvetica;
-  line-height: 1.4;
+  line-height: 1.4rem;
   margin: 0;
 }
 
@@ -10,7 +10,7 @@ html {
 header {
   background-color: cadetblue;
   color: white;
-  width: 960px;
+  max-width: 960px;
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -51,7 +51,7 @@ nav span {
 .promo-text {
   display: flex;
   justify-content: flex-end;
-  width: 960px;
+  max-width: 960px;
   margin: 10rem auto 0 auto;
   position: relative;
   left: 2rem;
@@ -69,7 +69,7 @@ nav span {
 /*Features styles*/
 
 .features {
-  width: 960px;
+  max-width: 960px;
   margin: 0 auto;
   display: flex;
   justify-content: center;
@@ -108,7 +108,7 @@ nav span {
 
 /*About styles*/
 .about {
-  width: 960px;
+  max-width: 960px;
   margin: 0 auto 5rem auto;
   display: flex;
   justify-content: center;
@@ -132,7 +132,7 @@ nav span {
 
 /*Footer styles*/
 footer {
-  width: 960px;
+  max-width: 960px;
   margin: 0 auto;
   background-color: azure;
   padding: 4rem;
@@ -143,4 +143,19 @@ footer {
 footer img {
   height: 1.5rem;
   margin-right: 1rem;
+}
+
+/*Responsive tablet*/
+
+@media only screen and (max-width: 960px) {
+  header, .banner, .promo-text, .features, .about, footer {
+    width: 100%;
+  }
+  .banner {
+    padding-top: 0;
+  }
+  .promo-text {
+    position: static;
+    left: 0;
+  }
 }
