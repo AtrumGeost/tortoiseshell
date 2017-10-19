@@ -1,7 +1,7 @@
 html {
   font-size: 18px;
   font-family: helvetica;
-  line-height: 1.4rem;
+  line-height: 1.4;
   margin: 0;
 }
 
@@ -24,6 +24,10 @@ header {
   padding-left: 2rem;
   display: flex;
   align-items: center;
+}
+
+.mobile-nav {
+  display: none;
 }
 
 nav {
@@ -130,19 +134,22 @@ nav span {
   padding: 0.5rem 0 0.5rem 1.25rem;
 }
 
+.about-item p {
+  line-height: 1.4;
+}
+
 /*Footer styles*/
 footer {
   max-width: 960px;
   margin: 0 auto;
   background-color: azure;
-  padding: 4rem;
   display: flex;
   align-items: center;
 }
 
 footer img {
   height: 1.5rem;
-  margin-right: 1rem;
+  margin: 4rem 1rem 4rem 4rem;
 }
 
 /*Responsive tablet*/
@@ -153,9 +160,97 @@ footer img {
   }
   .banner {
     padding-top: 0;
+    height: 22rem;
   }
   .promo-text {
     position: static;
     left: 0;
+    margin: 5rem auto 0 auto;
+  }
+
+  .promo-text span {
+    margin-right: 2rem;
+    padding: 0.75rem 4rem;
+    font-size: 1.33rem;
+  }
+}
+
+@media only screen and (max-width: 638px) {
+  .logo span {
+    display: none;
+  }
+
+  .mobile-nav {
+    display: block;
+  }
+
+  nav {
+    display: none;
+  }
+
+  .banner {
+    padding-top: 0;
+    height: 17rem;
+    background-position: 20%;
+  }
+
+  .promo-text {
+    margin: 9rem auto 0 auto;
+  }
+
+  .promo-text span {
+    padding: 1rem 0;
+    margin: 0 auto;
+    font-size: 1rem;
+    text-align: center;
+    width: 100%;
+  }
+
+  .features {
+    flex-direction: column;
+    align-items: center;
+    padding: 3.77rem 0;
+  }
+
+  .feature02, .feature03 {
+    margin-top: 1.54rem;
+  }
+
+  .feature-container span {
+    font-size: 0.77rem;
+  }
+
+  .about {
+    flex-direction: column;
+    margin: 0 auto;
+  }
+
+  .about-item {
+    width: 100%;
+    margin: 0;
+  }
+
+  .about h1 {
+    width: 100%;
+    padding: 0.5rem 0;
+    text-align: center;
+  }
+
+  .about p {
+    margin-left: 0.5rem;
+    font-size: 0.77rem;
+    margin-bottom: 4rem;
+  }
+
+  footer {
+    justify-content: center;
+  }
+
+  footer img {
+    margin: 4rem 1rem;
+  }
+
+  footer span {
+    display: none;
   }
 }
